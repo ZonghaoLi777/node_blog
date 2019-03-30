@@ -10,12 +10,12 @@ const getPostData = (req) => {
             resolve({});
             return
         }
-        if (req.headers['Content-type'] !== 'application/json'){
+        if (req.headers['content-type'] !== 'application/json'){
             resolve({});
             return
         }
         req.on('data', chunk => {
-            postData += chunk.toString;
+            postData += chunk.toString();
         })
         req.on('end', () => {
             if (!postData) {

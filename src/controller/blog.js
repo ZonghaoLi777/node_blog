@@ -23,7 +23,23 @@ const getDetail = (id) => {
         author: '张三'  
     }
 }
+
+const newBlog = (blogData = {}) => {
+    // blog对象
+    console.log(blogData)
+    return {
+        id: 1
+    }
+}
+
+const updateBlog = (id, blogData = {}) => {
+    // 更新博客
+    console.log(id, blogData)
+    return true
+}
 module.exports = {
     getList,
-    getDetail
+    getDetail,
+    newBlog,
+    updateBlog
 }
