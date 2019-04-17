@@ -17,7 +17,7 @@ const handleUserRouter = (req, res) => {
                 set(req.sessionId, data)
                 return new SuccessModel(data, '登陆成功');
             } 
-            return new ErrorModel('登陆失败');
+            return new ErrorModel('登陆失败'); 
         })
     }
 
