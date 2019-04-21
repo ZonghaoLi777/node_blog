@@ -42,8 +42,8 @@ const updateBlog = (id, blogData = {}) => {
     })
 }
 
-const delBlog = (id) => {
-    const sql = `update blog set isdel = 1 where id = ${id}`
+const delBlog = (id, author) => {
+    const sql = `update blog set isdel = 1 where id = ${id} and author = ${author}`
     return exec(sql).then(data => {
         if (data.affectedRows > 0) {
             return true
